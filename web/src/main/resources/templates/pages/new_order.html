@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Онлайн-магазин</title>
+    <script src="/plugins/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/plugins/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/plugins/bootstrap-5.3.3-dist/css/bootstrap.css"/>
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">AlcoStore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{'/'}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{'/create_form'}">Add</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{'/products'}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Carousel -->
+
+<!-- Welcome Message -->
+<div class="container my-5">
+    <div class="jumbotron">
+        <h1 class="display-4">Создать заказ: </h1>
+        <p class="lead">Заполните форму. </p>
+        <hr class="my-4">
+    </div>
+</div>
+
+<div class="container mt-5">
+    <form method="post" action="/api/order">
+        <div class="form-group mt-3">
+            <label for="storeProduct">Товар:</label>
+            <select class="form-control" id="storeProduct" name="storeProduct">
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group mt-3">
+            <label for="quantity">Количество:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity">
+        </div>
+        <div class="form-group mt-3">
+            <label for="address">Адрес доставки:</label>
+            <input type="text" class="form-control " id="address" name="address">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit Order</button>
+    </form>
+</div>
+
+<!-- Footers-->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+
+        <a href="/"
+           class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32">
+                <use xlink:href="#bootstrap"/>
+            </svg>
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
+

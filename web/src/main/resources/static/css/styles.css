@@ -1,0 +1,144 @@
+/* Стили для заголовков */
+h1 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+
+    object-fit: cover;
+    vertical-align: middle;
+    border-style: none;
+    height: 70vh;
+
+}
+
+.image-container {
+    text-align: center; /* Центрирование содержимого */
+}
+
+.image-container img {
+    max-width: 200px; /* Максимальная ширина изображения */
+    max-height: 200px; /* Максимальная высота изображения */
+    border-radius: 10px; /* Закругление краёв */
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Опционально: для добавления отступа сверху */
+}
+
+/* Стили для описания продукта */
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Стили для цены */
+strong {
+    color: #000;
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.product-image {
+    width: 200px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 10px; /* Закругленные края */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: block; /* Отображение как блочный элемент */
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 16px;
+}
+
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+}
+.welcome-text {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.welcome-text h1 {
+    margin-bottom: 0;
+}
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Вы можете изменить это значение на желаемую высоту */
+    object-fit: cover;
+}
+
+.service-image-container {
+    height: 300px; /* Фиксированная высота контейнера */
+    overflow: hidden; /* Скрытие части изображения, выходящей за границы контейнера */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-img-top {
+    max-height: 365px;
+}
+
+
+

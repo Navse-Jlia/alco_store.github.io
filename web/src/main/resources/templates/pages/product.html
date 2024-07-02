@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="utf-8">
+    <title>Онлайн-магазин</title>
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <script src="../plugins/jquery.js"></script>
+    <script src="../plugins/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../plugins/bootstrap-5.3.3-dist/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="storeProduct">
+
+
+    <!-- Панель навигации -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ALCOSTORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Личный кабинет</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Каталог
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Действие</a></li>
+                            <li><a class="dropdown-item" href="#">Другое действие</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Заказать</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="index">
+        <div class="container text-center">
+            <h1>ДОБРО ПОЖАЛОВАТЬ НА СТРАНИЦУ ТОВАРА</h1>
+        </div>
+    </div>
+    <div class="container-xxl" style="margin-top: 100px;">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <img th:src="@{images/image5.jpeg}" alt="">
+            </div>
+            <div class="col-4">
+                <h3 th:text="'Название товара: ' + ${storeProduct.title}" class="storeProduct-title"></h3>
+                <p class="storeProduct-description">
+                    Описаниe товара : <span th:text="${storeProduct.description}"></span>
+                </p>
+                <p th:text="'Цена: ' + ${storeProduct.price} + ' руб.'" class="storeProduct-price"></p>
+                <button onclick="runScript()" class="btn btn-primary">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
